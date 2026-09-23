@@ -1,39 +1,27 @@
 # Arnab Crafts
 
-A custom handcrafted photo frame storefront for Arnab Crafts.
+Fresh standalone Next.js storefront project for **Arnab Crafts**. It does not import catalog or customer data from another repository.
 
-Features included:
-- Homepage and storefront design
-- Product filters for price, size, and color
-- Add-to-cart and buy-now actions
-- Customer login and registration
-- Seller dashboard with add-product and settings form
-- Password change support for the owner
-- Contact details and WhatsApp ordering
-- Payment options: payment methods ready for UPI, cards, net banking, wallets, Razorpay-ready flow, and cash on delivery
-- Fresh clean project with no imported data from previous repositories
+## Included
+- Homepage with attractive fonts and realistic frame/decor images
+- Products from ₹149, A4 to large sizes
+- Filters for price, size, and color
+- Customer registration/login UI
+- Cart and WhatsApp order flow
+- Seller-only dashboard UI for adding products
+- Contact and WhatsApp: +91 91013 87479
+- PostgreSQL Prisma schema and secure-session utilities ready for production
+- Payment options planned: UPI, cards, net banking, wallets, Razorpay, and COD
+- Domain target: arnabcrafts.com
 
-Website branding:
-- Arnab Crafts
-- Contact: +91 91013 87479
-- WhatsApp: +91 91013 87479
-- Domain: arnabcrafts.com
+## Run locally
+```bash
+npm install
+npm run dev
+```
+Visit `http://localhost:3000`.
 
-Development:
-1. Install dependencies
-   npm install
-2. Run locally
-   npm run dev
-3. Open:
-   http://localhost:3000
+## Production security
+The storefront UI is ready, but before accepting real payments or customer data, deploy the API routes with a real PostgreSQL `DATABASE_URL`, long random `AUTH_SECRET`, and private `ADMIN_SETUP_TOKEN`. Never commit secrets. Configure Razorpay keys only in the hosting provider's encrypted environment settings. The domain must be purchased and connected through an account you own.
 
-Production setup:
-- Connect your own PostgreSQL database in production
-- Set secure environment variables in `.env.local` or host environment
-- Use your own domain and hosting in your name
-- Add live Razorpay keys for online payments if needed
-
-Default seller password in this demo frontend:
-- arnabcrafts@123
-
-You can change it within the seller dashboard. For real production use, move this to a secure backend with hashed passwords stored in a managed database.
+The GitHub repository alone does not register `arnabcrafts.com`, create a database, or activate live payments.
